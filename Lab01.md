@@ -18,6 +18,7 @@ Sim, os endereços IP foram configurados com o que foi pedido no laboratório: H
 
 ## Por que o pacote não chega ao Host B?
 Porque como Host B está em outra rede (192.168.20.0/24) ainda não foi configurada uma rota default nos hosts. Então o Host A sabe enviar apenas para sua própria rede local, e quando tenta alcançar 192.168.20.10, ele não consegue encaminhar os pacotes para outra rede.
+
 ---
 
 ## Configuração dos hosts
