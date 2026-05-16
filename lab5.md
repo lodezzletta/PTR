@@ -18,9 +18,6 @@ Router-XX(config-router)# end
 
 <img width="349" height="334" alt="image" src="https://github.com/user-attachments/assets/79951749-75f7-447c-89d3-f14fc2b04c99" />.
 
-<img width="588" height="106" alt="image" src="https://github.com/user-attachments/assets/88289495-9ffd-4a84-8034-72af6e56eb7e" />.
-
-<img width="574" height="328" alt="image" src="https://github.com/user-attachments/assets/6a2076b5-b529-465f-92f2-87b0940fd7eb" />.
 
 
 ### Router-SP
@@ -28,21 +25,11 @@ Router-XX(config-router)# end
 
 <img width="513" height="467" alt="image" src="https://github.com/user-attachments/assets/987a5598-1add-4ceb-bb93-ed8c62011b49" />.
 
-<img width="541" height="94" alt="image" src="https://github.com/user-attachments/assets/99bea713-2274-4421-983c-c05e0253902f" />.
-
-<img width="566" height="345" alt="image" src="https://github.com/user-attachments/assets/2a55168f-0385-4318-9572-710b8c88c48a" />.
-
-
 
 ### Router-BH 
 <img width="577" height="421" alt="image" src="https://github.com/user-attachments/assets/4eaa48b6-8f80-4042-88e9-3d793b625e99" />.
 
 <img width="498" height="438" alt="image" src="https://github.com/user-attachments/assets/76a64240-0712-4167-8ce9-b8b94bbcec8c" />.
-
-<img width="564" height="98" alt="image" src="https://github.com/user-attachments/assets/e9148399-a85e-4020-8489-d65e36f648ca" />.
-
-<img width="552" height="324" alt="image" src="https://github.com/user-attachments/assets/a0b4905e-ff32-43d5-9c5b-f0b43b7e0a50" />.
-
 
 Codigos utilizados para a configuração do RIP em seus respectivos roteadores.
 
@@ -57,13 +44,28 @@ Router-XX(config-router)# end
 ```
 
 ### Router-RJ
-<img width="454" height="213" alt="image" src="https://github.com/user-attachments/assets/2009f06f-69d8-48db-8bbb-8d11f2e708dd" />
+<img width="454" height="213" alt="image" src="https://github.com/user-attachments/assets/2009f06f-69d8-48db-8bbb-8d11f2e708dd" />.
+
+<img width="588" height="106" alt="image" src="https://github.com/user-attachments/assets/88289495-9ffd-4a84-8034-72af6e56eb7e" />.
+
+<img width="574" height="328" alt="image" src="https://github.com/user-attachments/assets/6a2076b5-b529-465f-92f2-87b0940fd7eb" />.
 
 ### Router-SP
-<img width="443" height="227" alt="image" src="https://github.com/user-attachments/assets/80d87cbe-630d-41eb-a274-01df19eb4095" />
+<img width="443" height="227" alt="image" src="https://github.com/user-attachments/assets/80d87cbe-630d-41eb-a274-01df19eb4095" />.
+
+<img width="541" height="94" alt="image" src="https://github.com/user-attachments/assets/99bea713-2274-4421-983c-c05e0253902f" />.
+
+<img width="566" height="345" alt="image" src="https://github.com/user-attachments/assets/2a55168f-0385-4318-9572-710b8c88c48a" />.
+
 
 ### Router-BH 
-<img width="444" height="197" alt="image" src="https://github.com/user-attachments/assets/04ec78b9-29b1-4e55-ba28-d844d5921072" />
+<img width="444" height="197" alt="image" src="https://github.com/user-attachments/assets/04ec78b9-29b1-4e55-ba28-d844d5921072" />.
+
+<img width="564" height="98" alt="image" src="https://github.com/user-attachments/assets/e9148399-a85e-4020-8489-d65e36f648ca" />.
+
+<img width="552" height="324" alt="image" src="https://github.com/user-attachments/assets/a0b4905e-ff32-43d5-9c5b-f0b43b7e0a50" />.
+
+
 
 codigos usados para a configuração do OSPF em seus respectivos roteadores.
 ## Análise comparativa RIP x OSPF
