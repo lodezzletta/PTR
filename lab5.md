@@ -55,6 +55,16 @@ Router-XX(config-router)# network 172.16.XX.0 0.0.0.255 area 0
 Router-XX(config-router)# network 172.16.XXX.0 0.0.0.255 area 0
 Router-XX(config-router)# end
 ```
+
+### Router-RJ
+<img width="454" height="213" alt="image" src="https://github.com/user-attachments/assets/2009f06f-69d8-48db-8bbb-8d11f2e708dd" />
+
+### Router-SP
+<img width="443" height="227" alt="image" src="https://github.com/user-attachments/assets/80d87cbe-630d-41eb-a274-01df19eb4095" />
+
+### Router-BH 
+<img width="444" height="197" alt="image" src="https://github.com/user-attachments/assets/04ec78b9-29b1-4e55-ba28-d844d5921072" />
+
 codigos usados para a configuração do OSPF em seus respectivos roteadores.
 ## Análise comparativa RIP x OSPF
 ### 1. Qual protocolo foi mais simples de configurar?
