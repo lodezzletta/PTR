@@ -33,6 +33,9 @@ Router-XX(config-router)# end
 
 Codigos utilizados para a configuração do RIP em seus respectivos roteadores.
 
+### Teste
+<img width="590" height="742" alt="image" src="https://github.com/user-attachments/assets/db0b3d10-84cd-4715-8a67-093cc7489fdd" />
+
 ## Funcionamento do OSPF
 ```
 Router-XX> enable
@@ -65,6 +68,8 @@ Router-XX(config-router)# end
 
 <img width="552" height="324" alt="image" src="https://github.com/user-attachments/assets/a0b4905e-ff32-43d5-9c5b-f0b43b7e0a50" />.
 
+### Teste
+<img width="595" height="774" alt="image" src="https://github.com/user-attachments/assets/d2e9fe16-72c8-46be-aac3-a2974a4f2d55" />
 
 
 codigos usados para a configuração do OSPF em seus respectivos roteadores.
