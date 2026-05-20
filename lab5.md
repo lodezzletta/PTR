@@ -68,11 +68,13 @@ Router-XX(config-router)# end
 
 <img width="552" height="324" alt="image" src="https://github.com/user-attachments/assets/a0b4905e-ff32-43d5-9c5b-f0b43b7e0a50" />.
 
+codigos usados para a configuração do OSPF em seus respectivos roteadores.
+
 ### Teste
 <img width="595" height="774" alt="image" src="https://github.com/user-attachments/assets/d2e9fe16-72c8-46be-aac3-a2974a4f2d55" />
 
 
-codigos usados para a configuração do OSPF em seus respectivos roteadores.
+
 ## Análise comparativa RIP x OSPF
 ### 1. Qual protocolo foi mais simples de configurar?
 O RIP foi mais simples, já que precisa de menos comandos e a configuração é mais direta. no qual so ativar o RIP e informar quais redes vão participar do roteamento.
