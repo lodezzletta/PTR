@@ -6,30 +6,43 @@ Aplicar políticas de roteamento BGP e integrar o BGP ao OSPF em um cenário já
 ## Teste de Falha
 ### todos os enlaces funcionando
 - `show ip bgp summary`
-<img width="631" height="201" alt="image" src="https://github.com/user-attachments/assets/7640849f-6bad-4b7c-b0d9-fecab2ec1e16" />
+<img width="639" height="207" alt="image" src="https://github.com/user-attachments/assets/c32e7645-afd9-4ad5-817f-730c4a4cde2c" />
+
 
 - `show ip bgp`
-<img width="590" height="221" alt="image" src="https://github.com/user-attachments/assets/f279be8c-4e60-4a06-973d-a89eda8fa1c2" />
+<img width="633" height="301" alt="image" src="https://github.com/user-attachments/assets/f8b75280-9812-44dd-bef0-b5d2dc79fe7d" />
+
 
 - `show ip route`
-<img width="566" height="485" alt="image" src="https://github.com/user-attachments/assets/36272d8d-35fd-4704-8dc0-94943398bbef" />
+<img width="655" height="523" alt="image" src="https://github.com/user-attachments/assets/93f67bb4-c9c4-4988-9a9a-07c0dae6fc29" />
+
 
 ### tirando um enlace
 - `show ip bgp summary`
-<img width="580" height="221" alt="image" src="https://github.com/user-attachments/assets/092c679a-656c-459d-a559-9a3562eed97e" />
+<img width="624" height="211" alt="image" src="https://github.com/user-attachments/assets/31689ba6-b7bb-4451-b1f7-64044191282b" />
+
+
 
 - `show ip bgp`
-<img width="583" height="223" alt="image" src="https://github.com/user-attachments/assets/e6a84e26-2245-477f-b2b3-06d95b04297d" />
+<img width="566" height="297" alt="image" src="https://github.com/user-attachments/assets/e0d57f6f-7e07-4c9b-b53c-088f2704c9a4" />
+
+
 
 ### Tirando todos os enlaces
 - `show ip bgp summary`
-<img width="579" height="227" alt="image" src="https://github.com/user-attachments/assets/f8aa0a28-c93b-4522-9746-c9f4ac25c726" />
+<img width="634" height="203" alt="image" src="https://github.com/user-attachments/assets/cef9e901-ed66-49bc-9906-da9403363298" />
+
+
 
 - `show ip bgp`
-<img width="570" height="220" alt="image" src="https://github.com/user-attachments/assets/da41c169-3af6-4611-aa5f-1452152a8f7d" />
+<img width="584" height="303" alt="image" src="https://github.com/user-attachments/assets/6c2f4e04-f098-4867-ae32-f459410d1e21" />
+
+
 
 - `show ip route`
-<img width="561" height="417" alt="image" src="https://github.com/user-attachments/assets/6b274f97-e7a7-48cf-9c46-15acbd33685d" />
+<img width="639" height="434" alt="image" src="https://github.com/user-attachments/assets/081a9061-28bf-4537-88bb-3ff13b6b1016" />
+
+
 
 
 ## Perguntas
@@ -69,13 +82,15 @@ O OSPF é usado dentro da empresa, para o roteamento interno, pois ele é mais a
 <img width="735" height="334" alt="image" src="https://github.com/user-attachments/assets/db1150b9-f9d6-4a53-8cca-278d04982b68" />
 
 - `show ip bgp summary`
-<img width="631" height="201" alt="image" src="https://github.com/user-attachments/assets/7640849f-6bad-4b7c-b0d9-fecab2ec1e16" />
+<img width="639" height="207" alt="image" src="https://github.com/user-attachments/assets/c32e7645-afd9-4ad5-817f-730c4a4cde2c" />
+
 
 - `show ip bgp`
-<img width="590" height="221" alt="image" src="https://github.com/user-attachments/assets/f279be8c-4e60-4a06-973d-a89eda8fa1c2" />
+<img width="633" height="301" alt="image" src="https://github.com/user-attachments/assets/f8b75280-9812-44dd-bef0-b5d2dc79fe7d" />
+
 
 - `show ip route`
-<img width="566" height="485" alt="image" src="https://github.com/user-attachments/assets/36272d8d-35fd-4704-8dc0-94943398bbef" />
+<img width="655" height="523" alt="image" src="https://github.com/user-attachments/assets/93f67bb4-c9c4-4988-9a9a-07c0dae6fc29" />
 
 - `show ip ospf`
 <img width="503" height="590" alt="image" src="https://github.com/user-attachments/assets/f2abff9b-34f7-4f76-a747-7d5404f8a3d5" />
