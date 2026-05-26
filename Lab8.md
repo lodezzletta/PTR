@@ -3,6 +3,7 @@
 ## Objetivo
 Aplicar políticas de roteamento BGP e integrar o BGP ao OSPF em um cenário já previamente configurado, realizando apenas os ajustes específicos deste laboratório para anúncio de prefixos, escolha de caminho preferencial de saída, propagação controlada de rota default e análise de redundância entre provedores.
 
+
 ## Teste de Falha
 ### todos os enlaces funcionando
 - `show ip bgp summary`
@@ -16,7 +17,7 @@ Aplicar políticas de roteamento BGP e integrar o BGP ao OSPF em um cenário já
 - `show ip route`
 <img width="655" height="523" alt="image" src="https://github.com/user-attachments/assets/93f67bb4-c9c4-4988-9a9a-07c0dae6fc29" />
 
-
+Com todos os enlaces ativos, o BGP possui dois caminhos para as redes externas: um via ISP1, pelo next hop 10.10.10.10, e outro via ISP2, pelo next hop 10.2.0.2. Como o caminho via ISP1 recebeu Weight 200, ele foi escolhido como melhor caminho.
 ### tirando um enlace
 - `show ip bgp summary`
 <img width="624" height="211" alt="image" src="https://github.com/user-attachments/assets/31689ba6-b7bb-4451-b1f7-64044191282b" />
@@ -26,7 +27,7 @@ Aplicar políticas de roteamento BGP e integrar o BGP ao OSPF em um cenário já
 - `show ip bgp`
 <img width="566" height="297" alt="image" src="https://github.com/user-attachments/assets/e0d57f6f-7e07-4c9b-b53c-088f2704c9a4" />
 
-
+Ao desligar apenas um enlace com o ISP1, a sessão BGP com o ISP1 continuou funcionando, pois ainda existia outro caminho físico até a loopback do ISP1. Isso mostra a vantagem de usar a sessão BGP por loopback.
 
 ### Tirando todos os enlaces
 - `show ip bgp summary`
@@ -42,8 +43,7 @@ Aplicar políticas de roteamento BGP e integrar o BGP ao OSPF em um cenário já
 - `show ip route`
 <img width="639" height="434" alt="image" src="https://github.com/user-attachments/assets/081a9061-28bf-4537-88bb-3ff13b6b1016" />
 
-
-
+Ao desligar todos os enlaces com o ISP1, o caminho via 10.10.10.10 deixou de ser utilizado e o roteador passou a escolher o caminho via 10.2.0.2, correspondente ao ISP2. Assim, o teste mostrou o funcionamento da contingência.
 
 ## Perguntas
 ### Qual é o papel do OSPF neste laboratório?
