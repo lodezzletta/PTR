@@ -5,7 +5,7 @@ Aplicar políticas de roteamento BGP e integrar o BGP ao OSPF em um cenário já
 
 
 ## Teste de Falha
-### todos os enlaces funcionando
+### Todos os enlaces funcionando
 Com todos os enlaces ativos, o BGP possui dois caminhos para as redes externas: um via ISP1, pelo next hop 10.10.10.10, e outro via ISP2, pelo next hop 10.2.0.2. Como o caminho via ISP1 recebeu Weight 200, ele foi escolhido como melhor caminho.
 
 - `show ip bgp summary`
@@ -19,7 +19,7 @@ Com todos os enlaces ativos, o BGP possui dois caminhos para as redes externas: 
 - `show ip route`
 <img width="655" height="523" alt="image" src="https://github.com/user-attachments/assets/93f67bb4-c9c4-4988-9a9a-07c0dae6fc29" />
 
-### tirando um enlace
+### Tirando um enlace
 Ao desligar apenas um enlace com o ISP1, a sessão BGP com o ISP1 continuou funcionando, pois ainda existia outro caminho físico até a loopback do ISP1.
 
 - `show ip bgp summary`
