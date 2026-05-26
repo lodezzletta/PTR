@@ -3,6 +3,22 @@
 ## Objetivo
 Aplicar políticas de roteamento BGP e integrar o BGP ao OSPF em um cenário já previamente configurado, realizando apenas os ajustes específicos deste laboratório para anúncio de prefixos, escolha de caminho preferencial de saída, propagação controlada de rota default e análise de redundância entre provedores.
 
+## Teste de Falha
+### todos os enlaces funcionando
+<img width="631" height="201" alt="image" src="https://github.com/user-attachments/assets/7640849f-6bad-4b7c-b0d9-fecab2ec1e16" />
+<img width="590" height="221" alt="image" src="https://github.com/user-attachments/assets/f279be8c-4e60-4a06-973d-a89eda8fa1c2" />
+<img width="566" height="485" alt="image" src="https://github.com/user-attachments/assets/36272d8d-35fd-4704-8dc0-94943398bbef" />
+
+### tirando um enlace
+<img width="580" height="221" alt="image" src="https://github.com/user-attachments/assets/092c679a-656c-459d-a559-9a3562eed97e" />
+<img width="583" height="223" alt="image" src="https://github.com/user-attachments/assets/e6a84e26-2245-477f-b2b3-06d95b04297d" />
+
+### Tirando todos os enlaces
+<img width="579" height="227" alt="image" src="https://github.com/user-attachments/assets/f8aa0a28-c93b-4522-9746-c9f4ac25c726" />
+<img width="570" height="220" alt="image" src="https://github.com/user-attachments/assets/da41c169-3af6-4611-aa5f-1452152a8f7d" />
+<img width="561" height="417" alt="image" src="https://github.com/user-attachments/assets/6b274f97-e7a7-48cf-9c46-15acbd33685d" />
+
+
 ## Perguntas
 ### Qual é o papel do OSPF neste laboratório?
 O OSPF representa o roteamento interno da empresa, e ele é utilizado para divulgar as redes internas, como a o _192.168.0.0/24_ e o _loopback_ do roteador da empresa. A ideia é que os roteadores internos saibam sair da rede sem precisar conhecer todas as rotas externas da Internet.
