@@ -27,7 +27,7 @@ Com todos os enlaces ativos, o BGP possui dois caminhos para as redes externas: 
 - `show ip bgp`
 <img width="566" height="297" alt="image" src="https://github.com/user-attachments/assets/e0d57f6f-7e07-4c9b-b53c-088f2704c9a4" />
 
-Ao desligar apenas um enlace com o ISP1, a sessão BGP com o ISP1 continuou funcionando, pois ainda existia outro caminho físico até a loopback do ISP1. Isso mostra a vantagem de usar a sessão BGP por loopback.
+Ao desligar apenas um enlace com o ISP1, a sessão BGP com o ISP1 continuou funcionando, pois ainda existia outro caminho físico até a loopback do ISP1.
 
 ### Tirando todos os enlaces
 - `show ip bgp summary`
@@ -43,7 +43,7 @@ Ao desligar apenas um enlace com o ISP1, a sessão BGP com o ISP1 continuou func
 - `show ip route`
 <img width="639" height="434" alt="image" src="https://github.com/user-attachments/assets/081a9061-28bf-4537-88bb-3ff13b6b1016" />
 
-Ao desligar todos os enlaces com o ISP1, o caminho via 10.10.10.10 deixou de ser utilizado e o roteador passou a escolher o caminho via 10.2.0.2, correspondente ao ISP2. Assim, o teste mostrou o funcionamento da contingência.
+Ao desligar todos os enlaces com o ISP1, o caminho via 10.10.10.10 deixou de ser utilizado e o roteador passou a escolher o caminho via 10.2.0.2, correspondente ao ISP2.
 
 ## Perguntas
 ### Qual é o papel do OSPF neste laboratório?
