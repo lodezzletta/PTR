@@ -6,6 +6,8 @@ Aplicar políticas de roteamento BGP e integrar o BGP ao OSPF em um cenário já
 
 ## Teste de Falha
 ### todos os enlaces funcionando
+Com todos os enlaces ativos, o BGP possui dois caminhos para as redes externas: um via ISP1, pelo next hop 10.10.10.10, e outro via ISP2, pelo next hop 10.2.0.2. Como o caminho via ISP1 recebeu Weight 200, ele foi escolhido como melhor caminho.
+
 - `show ip bgp summary`
 <img width="639" height="207" alt="image" src="https://github.com/user-attachments/assets/c32e7645-afd9-4ad5-817f-730c4a4cde2c" />
 
@@ -17,8 +19,9 @@ Aplicar políticas de roteamento BGP e integrar o BGP ao OSPF em um cenário já
 - `show ip route`
 <img width="655" height="523" alt="image" src="https://github.com/user-attachments/assets/93f67bb4-c9c4-4988-9a9a-07c0dae6fc29" />
 
-Com todos os enlaces ativos, o BGP possui dois caminhos para as redes externas: um via ISP1, pelo next hop 10.10.10.10, e outro via ISP2, pelo next hop 10.2.0.2. Como o caminho via ISP1 recebeu Weight 200, ele foi escolhido como melhor caminho.
 ### tirando um enlace
+Ao desligar apenas um enlace com o ISP1, a sessão BGP com o ISP1 continuou funcionando, pois ainda existia outro caminho físico até a loopback do ISP1.
+
 - `show ip bgp summary`
 <img width="624" height="211" alt="image" src="https://github.com/user-attachments/assets/31689ba6-b7bb-4451-b1f7-64044191282b" />
 
@@ -27,9 +30,9 @@ Com todos os enlaces ativos, o BGP possui dois caminhos para as redes externas: 
 - `show ip bgp`
 <img width="566" height="297" alt="image" src="https://github.com/user-attachments/assets/e0d57f6f-7e07-4c9b-b53c-088f2704c9a4" />
 
-Ao desligar apenas um enlace com o ISP1, a sessão BGP com o ISP1 continuou funcionando, pois ainda existia outro caminho físico até a loopback do ISP1.
-
 ### Tirando todos os enlaces
+Ao desligar todos os enlaces com o ISP1, o caminho via 10.10.10.10 deixou de ser utilizado e o roteador passou a escolher o caminho via 10.2.0.2, correspondente ao ISP2.
+
 - `show ip bgp summary`
 <img width="634" height="203" alt="image" src="https://github.com/user-attachments/assets/cef9e901-ed66-49bc-9906-da9403363298" />
 
@@ -42,8 +45,6 @@ Ao desligar apenas um enlace com o ISP1, a sessão BGP com o ISP1 continuou func
 
 - `show ip route`
 <img width="639" height="434" alt="image" src="https://github.com/user-attachments/assets/081a9061-28bf-4537-88bb-3ff13b6b1016" />
-
-Ao desligar todos os enlaces com o ISP1, o caminho via 10.10.10.10 deixou de ser utilizado e o roteador passou a escolher o caminho via 10.2.0.2, correspondente ao ISP2.
 
 ## Perguntas
 ### Qual é o papel do OSPF neste laboratório?
