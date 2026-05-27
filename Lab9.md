@@ -2,6 +2,8 @@
 
 ## Objetivo
 Implementar um backbone MPLS simplificado na rede do provedor, dando continuidade ao Lab 08, de modo a compreender o papel dos roteadores CE, PE e P, habilitar o transporte por rótulos no núcleo da operadora e verificar o funcionamento do backbone MPLS sobre uma infraestrutura previamente estabelecida com OSPF e BGP.
+
+## Prints
 - Topologia
 <img width="794" height="295" alt="image" src="https://github.com/user-attachments/assets/4a3fcd2e-3501-42b9-88ec-e0afeb309b53" />
 
@@ -20,3 +22,33 @@ Implementar um backbone MPLS simplificado na rede do provedor, dando continuidad
 <img width="657" height="378" alt="image" src="https://github.com/user-attachments/assets/4b4f8d5b-cbbd-4fc0-81e3-cffdd055b76d" />
 <img width="657" height="211" alt="image" src="https://github.com/user-attachments/assets/08d5f503-0e43-4889-9895-0d2af50de723" />
 <img width="660" height="175" alt="image" src="https://github.com/user-attachments/assets/e91f615d-8187-4797-862d-b73869344573" />
+
+## Questões
+- Qual é a principal diferença entre roteamento IP tradicional e encaminhamento com MPLS?
+
+
+- Qual é a função do OSPF dentro do backbone do provedor?
+
+
+- Qual é o papel dos roteadores PE?
+
+
+- Qual é o papel do roteador P?
+
+- Por que o cliente normalmente não precisa configurar MPLS no seu roteador?
+
+
+- Como o Lab 09 complementa o Lab 08?
+
+
+- O que significa dizer que o MPLS atua como tecnologia de “camada 2,5”?
+
+
+- Por que o backbone precisa de um IGP estável antes da ativação do MPLS?
+
+
+
+
+
+
+
