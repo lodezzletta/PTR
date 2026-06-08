@@ -16,4 +16,6 @@
 
 - ping, http e telnet
 <img width="901" height="426" alt="image" src="https://github.com/user-attachments/assets/45febc9f-4f48-4ecf-9a65-67010210a743" />
+<img width="377" height="117" alt="image" src="https://github.com/user-attachments/assets/64292882-310f-42a6-8a76-9fa15e9478f8" />
+<img width="401" height="62" alt="image" src="https://github.com/user-attachments/assets/d7558a0b-7efc-4caa-830d-7fc1ef3fd908" />
 
