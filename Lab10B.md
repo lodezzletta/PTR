@@ -1,4 +1,9 @@
+# Laboratorio 10B - Enzo Porto e Mello - 221006727
 
+## Objetivo
+Implementar um firewall stateful em uma máquina Linux no PNetLab , reutilizando a topologia do Laboratório 10, com regras baseadas em estado de conexão para permitir automaticamente o tráfego de retorno de sessões já autorizadas.
+
+## Prints
 - topologia
   
 <img width="560" height="384" alt="image" src="https://github.com/user-attachments/assets/e1e1d056-ae8c-42f0-bccf-091cc41a4bac" />
@@ -47,7 +52,6 @@
       <img width="781" height="45" alt="image" src="https://github.com/user-attachments/assets/5ed26ec4-4dec-4e37-8118-a50e3f3cc17e" />
       
 
-## Tabela
 ## Tabela comparativa entre Laboratório 10 e Laboratório 10B
 
 | Teste                                | Laboratório 10 - Filtro de pacotes                                                                                            | Laboratório 10B - Stateful                                                                                                                                      |
@@ -69,40 +73,42 @@ Já no firewall stateful o firewall acompanha o estado das conexões. Assim, qua
 
 **1. O que diferencia um firewall stateful de um firewall de pacotes simples?**
 
-Um firewall de pacotes simples analisa cada pacote de forma isolada, usando informações como IP de origem, IP de destino, protocolo e porta. Já um firewall stateful acompanha o estado das conexões. Assim, ele consegue identificar se um pacote está iniciando uma conexão nova ou se faz parte de uma conexão que já foi permitida.
+Um firewall de pacotes simples analisa cada pacote de forma isolada, usando informações como IP de origem, IP de destino, protocolo e porta. Já um firewall stateful acompanha o estado das conexões, no qual ele consegue identificar se um pacote está iniciando uma conexão nova ou se faz parte de uma conexão que já foi permitida.
 
 **2. Qual a função de `-m conntrack --ctstate ESTABLISHED,RELATED`?**
-
-Essa regra usa o módulo `conntrack` para verificar o estado da conexão. O estado `ESTABLISHED` permite pacotes que fazem parte de uma conexão já estabelecida. O estado `RELATED` permite pacotes relacionados a uma conexão já existente. Com isso, o firewall aceita automaticamente o tráfego de retorno de conexões autorizadas.
+O firewall aceita automaticamente o tráfego de retorno de conexões autorizadas, porque:
+  - O `conntrack` para verificar o estado da conexão;
+  - O estado `ESTABLISHED` permite pacotes que fazem parte de uma conexão já estabelecida;
+  - O estado `RELATED` permite pacotes relacionados a uma conexão já existente.
 
 **3. Por que o retorno da conexão HTTP não precisou de regra explícita no sentido inverso?**
 
-Porque a conexão HTTP foi iniciada pelo Cliente 1 e permitida pelo firewall. Depois disso, os pacotes de resposta do Cliente 2 foram reconhecidos como parte de uma conexão já estabelecida. Por isso, eles foram aceitos pela regra `ESTABLISHED,RELATED`, sem precisar criar uma regra específica de volta.
+Porque a conexão HTTP foi iniciada pelo Cliente 1 e permitida pelo firewall e os pacotes de resposta do Cliente 2 foram reconhecidos como parte de uma conexão já estabelecida.
 
 **4. O que caracteriza um pacote no estado `NEW`?**
 
-Um pacote no estado `NEW` é um pacote que está iniciando uma nova conexão. No laboratório, isso acontece quando o Cliente 1 tenta iniciar um ping ou uma conexão HTTP para o Cliente 2.
+Um pacote no estado `NEW` é um pacote que está iniciando uma nova conexão. 
 
 **5. Qual a principal vantagem de usar regras stateful em relação ao Laboratório 10?**
 
-A principal vantagem é reduzir a quantidade de regras necessárias. No Lab 10, era preciso criar regras de ida e de volta. No Lab 10B, basta permitir a nova conexão e deixar o retorno ser tratado automaticamente pela regra `ESTABLISHED,RELATED`.
+A principal vantagem é reduzir a quantidade de regras necessárias. No Lab 10, era preciso criar regras de ida e de volta. No Lab 10B, basta permitir a nova conexão e deixar o retorno ser tratado automaticamente.
 
 **6. Por que o Cliente 2 não conseguiu iniciar novas conexões para o Cliente 1?**
 
-Porque as regras do firewall só permitem novas conexões iniciadas pelo Cliente 1 para o Cliente 2. O Cliente 2 só consegue enviar pacotes de resposta quando eles pertencem a uma conexão já estabelecida. Como uma nova conexão iniciada pelo Cliente 2 não se encaixa nessa situação, ela é bloqueada pela política padrão `DROP`.
+Porque as regras do firewall só permitem novas conexões iniciadas pelo Cliente 1 para o Cliente 2, e o Cliente 2 só consegue enviar pacotes de resposta quando eles pertencem a uma conexão já estabelecida. 
 
 **7. O que mudou na quantidade e na lógica das regras entre Laboratório 10 e Laboratório 10B?**
 
-No Laboratório 10, a lógica era baseada em regras separadas para cada sentido da comunicação. Era necessário liberar a ida e também o retorno. No Laboratório 10B, a lógica ficou mais simples, pois o firewall acompanha o estado da conexão. Assim, o retorno das conexões permitidas passa automaticamente, reduzindo a repetição de regras.
+No Lab 10, era necessário cirar reagras de ida e também de volta. No Lab 10B tem um logica mais simples e com menos quantidade de regras, porque o firewall acompanha o estado da conexão, onde o retorno das conexões permitidas passa automaticamente.
 
 **8. Em que tipo de ambiente um firewall stateful tende a ser mais adequado?**
 
-Um firewall stateful é mais adequado em redes onde há muitas conexões entrando e saindo, como redes corporativas, servidores, laboratórios com várias máquinas e ambientes que precisam de controle mais organizado. Ele facilita a administração porque evita a criação manual de muitas regras de retorno.
+Um firewall stateful é mais adequado em redes onde há muitas conexões entrando e saindo, como redes corporativas, servidores etc, ja que facilita a administração porque evita a criação manual de muitas regras de retorno.
 
 **9. O firewall stateful elimina a necessidade de política de bloqueio padrão? Explique.**
 
-Não. Mesmo usando firewall stateful, ainda é importante manter uma política padrão de bloqueio, como `DROP`. Isso garante que tudo que não foi permitido explicitamente seja bloqueado. O stateful ajuda a liberar automaticamente respostas de conexões autorizadas, mas não significa que todo tráfego deve ser aceito.
+Não. Porque, Mesmo usando firewall stateful ainda é importante manter uma política padrão de bloqueio. Visto que isso garante que tudo que não foi permitido explicitamente seja bloqueado.
 
 **10. O que a atividade comparativa mostrou de forma mais clara sobre a diferença entre os dois modelos?**
 
-A atividade mostrou que o firewall de pacotes exige regras mais detalhadas e repetidas, principalmente para ida e volta da comunicação. Já o firewall stateful entende o estado das conexões e permite automaticamente o retorno de tráfegos autorizados. Com isso, o Lab 10B ficou mais simples, mais organizado e mais fácil de administrar.
+A atividade mostrou que o firewall de pacotes exige regras mais detalhadas e repetidas. Já o firewall stateful entende o estado das conexões e permite automaticamente o retorno de tráfegos autorizados.
