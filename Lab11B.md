@@ -279,7 +279,7 @@ Os logs do Nginx mostram os acessos recebidos pelo WAF, incluindo IP de origem, 
 
 7. O que os logs do ModSecurity mostram?
 
-Os logs do ModSecurity mostram as regras acionadas pelo WAF. No teste de XSS, o ModSecurity registrou mensagens indicando ataque XSS, como “XSS Attack Detected via libinjection” e “XSS Filter - Category 1: Script Tag Vector”.
+Os logs do ModSecurity mostram as regras acionadas pelo WAF. No teste de XSS, o ModSecurity registrou mensagens indicando ataque XSS, como “XSS Attack Detected via libinjection”.
 
 8. Um bloqueio HTTP significa necessariamente falha da rede? Explique.
 
@@ -299,6 +299,5 @@ O Lab 11B mostrou que o WAF atua de forma diferente de um firewall tradicional e
 
 Nos testes realizados, os acessos normais foram permitidos e retornaram `200`. Já alguns acessos suspeitos foram recusados ou bloqueados, como o XSS e a URL codificada, que retornaram `403`.
 
-Com os logs do Nginx foi possível ver os acessos e os códigos HTTP retornados. Com os logs do ModSecurity foi possível confirmar que o OWASP CRS identificou padrões de ataque, principalmente no teste de XSS.
+Com os logs do Nginx foi possível ver os acessos e os códigos HTTP retornados, e com os logs do ModSecurity foi possível confirmar que o OWASP CRS identificou padrões de ataque.
 
-Assim, o laboratório mostrou que é possível manter o serviço web publicado e, ao mesmo tempo, bloquear requisições suspeitas sem fechar a porta 80.
