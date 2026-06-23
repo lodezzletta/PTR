@@ -2,9 +2,15 @@
 
 ## Objetivo
 
-Realizar testes de ataques web em um ambiente protegido por WAF, usando Nginx, ModSecurity e OWASP CRS. O objetivo foi verificar como o WAF se comporta diante de requisições HTTP normais e requisições suspeitas, analisando os códigos retornados no Nginx e os eventos registrados nos logs do ModSecurity.
+Dar continuidade ao Lab 11A, realizando testes controlados de requisições HTTP legítimas e maliciosas contra o ambiente protegido por Nginx + ModSecurity + OWASP CRS, de modo que o estudante consiga:
 
-Esse laboratório continua o Lab 11A. No Lab 11A foi feita a configuração do WAF como proxy reverso. Já no Lab 11B, o foco foi testar se o WAF consegue identificar e bloquear padrões suspeitos, como SQL Injection, XSS e tentativa de acesso indevido a arquivos.
+- observar o comportamento do WAF diante de tráfego normal e suspeito;
+- identificar bloqueios gerados por regras do OWASP CRS;
+- analisar logs do Nginx e do ModSecurity;
+- compreender, na prática, a diferença entre:
+    - firewall de pacotes;
+    - firewall stateful;
+    - WAF.
 
 ## Prints
 
